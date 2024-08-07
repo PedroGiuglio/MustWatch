@@ -1,0 +1,156 @@
+.dede{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+}
+
+.dede h1{
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 28px;
+}
+
+.columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sectionColumns{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.columnFilters{
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0px 0px 11px 2px #c2c2c2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.columnFilters .results{
+    height: 100px;
+    background-color: #01b4e4;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.columnFilters button{
+    height: 50px;
+    border: none;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+button a{
+    width: 70%;
+    text-align: left;
+    margin-left: 15px;
+}
+
+button span{
+    background-color: rgb(191, 191, 191);
+    border-radius: 10px;
+    width: 50px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+.imgPrueba{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.div-con-fondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    background-color: white;
+}
+
+.aver{
+    border-radius: 10px;
+    height: 150px;
+    width: 800px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: 0px 0px 11px 2px #c2c2c2;
+    border-radius: 10px;
+}
+
+.spaceText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 680px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.spaceText h2{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.spaceText h2:hover{
+    color: #01b4e4;
+    cursor: pointer;
+}
+
+.spaceText p span{
+    color: rgb(165, 165, 165);
+}
+
+.prueba{
+    width: 100px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.imgPrueba button{
+    width: 80%;
+    height: 50px;
+    margin-bottom: 50px;
+    background-color: #22b9d5;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}

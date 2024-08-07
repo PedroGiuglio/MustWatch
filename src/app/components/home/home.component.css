@@ -1,0 +1,525 @@
+.mat-progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ajusta el z-index según sea necesario */
+  color: white;
+}
+
+
+
+.back{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundImg{
+    background-color: aqua;
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
+
+.backgroundImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa gris con opacidad */
+    z-index: 1; 
+  }
+
+  .sectionText{
+    color: white;
+    z-index: 2;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .sectionText h2{
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .sectionText h3{
+    font-size: 30px;
+  }
+
+.pruebaUno{
+    width: 80%;
+    position: relative;
+    z-index: 2;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    width: 100%;  
+}
+
+.pruebaUno input{
+    border-radius: 30px;
+    height: 50px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.pruebaUno button{
+    color: white;
+    height: 50px;
+    width: 120px;
+    background-color: #01b4e4;
+    border-radius: 30px;
+    margin-left: -40px;
+    font-size: 18px;
+}
+
+.sectionTendencias{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sectionTendencias h3{
+  /* display: flex;
+  align-items: center; */
+  margin-right: 25px;
+}
+
+.sectionTitleTrending{
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.botoneraTrending{
+  height: 40px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid RGB(3 32 56);
+  color: #03bb85;
+  
+}
+
+.botoneraTrending button{
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #03bb85;
+  font-weight: bold;
+}
+
+.botoneraTrending .button{
+  background-color: RGB(3 32 56);
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+
+.noventa{
+  width: 80%;
+  background-color: #c2c2c2;
+}
+
+.imgPrueba{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01b4e4;
+}
+
+.div-con-fondo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  overflow-x: auto;
+  background-image: url(/assets/images/prueba.jpg);
+  background-size: cover;
+}
+
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #032038;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+.aver{
+  border-radius: 10px;
+  width: 220px;
+  height: 420px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  border-radius: 10px;
+}
+
+.spaceText{
+  width: 100%;
+  height: 30%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 20px;
+}
+
+.percentRating{
+  background-color: #081c22;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.percentRating p{
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spaceText h2{
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.spaceText h2:hover{
+  color: #01b4e4;
+  cursor: pointer;
+}
+
+.spaceText p span{
+  color: rgb(165, 165, 165);
+}
+
+/* PRUEBA RATING */
+
+.container {
+  width: 70px;
+  height: 70px;
+  background-color: #231c3d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.circular-progress {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress:before {
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: #231c3d;
+  border-radius: 50%;
+}
+
+.value-container {
+  font-family: "Poppins", sans-serif;
+  color: #231c3d;
+  z-index: 1; /* Asegura que el contenido del valor esté sobre el fondo circular */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  height: 40px;
+}
+
+.value-container p{
+  font-size: 10px;
+}
+
+.value-container h6{
+  font-size: 22px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.background-red {
+  background-color: red;
+}
+
+.background-light-green {
+  background-color: #FFEB38;
+}
+
+.background-dark-green {
+  background-color: #00C040;
+}
+
+/* FIN DE PRUEBA RATIN */
+
+.prueba{
+  width: 220px;
+  height: 70%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.sectionTrailer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.containerTrailer{
+  background-color: aqua;
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerTrailer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa gris con opacidad */
+  z-index: 1; 
+}
+
+.div-con-fondo-trailer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+}
+
+
+.sectionTrailerText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-weight: bold;
+  height: 8vh;
+  width: 100%;
+  position: relative;
+}
+
+.sectionTrailerText::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa gris con opacidad */
+  z-index: 0; 
+}
+
+.sectionTitle {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionTitle h3 {
+  z-index: 1;
+  color: white;
+  margin: 0; /* Agrega un margen para evitar la superposición */
+}
+
+.sectionButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /* Alinear los botones a la derecha */
+  align-items: center;
+  width: 70%;
+  height: auto;
+  z-index: 1; 
+}
+
+.botonera{
+  height: 40px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid #03bb85;
+  
+}
+
+.botonera button{
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.botonera .button{
+  background-color: #03bb85;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+
+.containterBoxes{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 32vh;
+  overflow-x: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.containerRepro{
+  width: 300px;
+  height: 200px;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  border-radius: 10px;
+  background-size: cover;
+  z-index: 2;
+}
+
+.containerRepro h6{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.pruebaTrailer{
+  margin-left: 20px;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.3s ease; 
+  z-index: 2;
+  box-shadow: 0px 0px 7px 2px #888888;
+}
+
+.pruebaTrailer button{
+  background-color: transparent;
+  color: white;
+  border: 0px;
+}
+
+
+.pruebaTrailer svg{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pruebaTrailer svg:hover{
+  width: 150px;
+  height: 150px;
+}

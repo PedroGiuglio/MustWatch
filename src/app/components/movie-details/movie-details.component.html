@@ -1,0 +1,69 @@
+<div class="home"  [style.background-image]="getBackgroundImageUrl(movieDetails.backdrop_path)">
+    <div class="prueba">
+       <div class="imgPortada" [style.background-image]="getBackgroundImageUrl(movieDetails.poster_path)"></div>
+       <div class="containerProvider" *ngIf="setProvider">
+            <div class="logoProvider" [style.background-image]="getBackgroundImageUrl(logoProvider)"></div>
+            <div class="sectionTextProvider">
+                <p>Ahora en retransmisión <br> <span>Ver en {{nameProvider}}</span></p>
+            </div>
+       </div>
+    </div>
+    <div class="prueba2">
+        <div class="sectionDetails" *ngIf="loading">
+            <h1>{{movieDetails.original_title}} <span>({{movieDetails.release_date.substring(0,4)}})</span></h1>
+            <div class="facts">
+                <span class="certification">{{rated}}</span>
+                <span class="release">{{movieDetails.release_date}} ({{movieDetails.origin_country}})</span>
+                <span class="genre" *ngFor="let genre of genres">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                      </svg><a>{{genre.name}}</a>
+                </span>
+                <span class="time">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                      </svg>{{tiempoFormateado}}
+                </span>
+            </div>
+            <div class="sectionRating">
+                <div class="container">
+                    <div class="circular-progress" [ngClass]="{'background-red': isRedBackground(movieDetails.vote_average), 'background-light-green': isLightGreenBackground(movieDetails.vote_average), 'background-dark-green': isDarkGreenBackground(movieDetails.vote_average)}">
+                        <div class="value-container">
+                            <h6>{{porcentaje(movieDetails.vote_average)}}</h6>
+                            <p>%</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="repro">
+                <button class="btn">
+                    <a href="https://themoviedb.org/video/play?key={{getMovieVideoResult}}" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                      </svg> Reproducir tráiler
+                    </a>
+                </button>
+            </div>
+            <div class="headerInfo">
+                <h3 class="tagline">{{movieDetails.tagline}}</h3>
+                <h3>Vista General</h3>
+                <p>{{movieDetails.overview}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sectionCast">
+    <div class="sectionTitleCast">
+        <h3>Reparto principal</h3>
+    </div>
+    <div class="div-con-fondo mostly-customized-scrollbar">
+        <div class="aver" *ngFor="let cast of resultCast">
+        <div class="pruebaCast" [style.background-image]="getBackgroundImageUrl(cast.profile_path)"></div>
+        <div class="sectionInfoCast">
+            <p><span>{{cast.original_name}}</span></p>
+            <p>{{cast.character}}</p>
+        </div>
+    </div>
+    </div>
+</div>
+

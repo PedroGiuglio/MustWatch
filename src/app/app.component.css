@@ -1,0 +1,43 @@
+nav{
+    height: 8vh;
+}
+
+header{
+    height: 7vh;
+    width: 100%;
+}
+
+
+
+header input{
+    width: 100%;
+    border-radius: 0px;
+    height: 7vh;
+    box-shadow: 0px 6px 7px 0px #867e7e;
+}
+
+.alFondo{
+    margin-right: 25px;
+}
+
+
+
+.title{
+    color: #22b9d5;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+.nav-item button{
+    background-color: transparent;
+    border-width: 0;
+}
+
+footer{
+    background-color: #032038;
+    color:white;
+    font-weight: bolder;
+    text-decoration: none;
+}

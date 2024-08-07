@@ -1,0 +1,105 @@
+
+.columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sectionColumns{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.columnFilters{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 11px 2px #c2c2c2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.columnFilters h4{
+    margin: 20px;
+}
+
+.titleFilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.areaForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-select{
+    width: 90%;
+}
+
+.columnFilters ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+}
+
+ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:transparent;
+	border-radius:20px;
+    height: 40px;
+	border:1px solid #000000;
+	color:#000000;
+	font-family:Arial;
+	font-size:14px;
+	padding-left:10px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+ul li.selected{
+    background-color: #01b4e4;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+ul li input{
+    cursor: pointer;
+}
+
+.areaButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.areaButton button{
+    background-color: #01b4e4;
+    border-color: transparent;
+    border-radius:30px;
+    width: 90%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}

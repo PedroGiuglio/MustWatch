@@ -1,0 +1,25 @@
+<div class="columns">
+    <div class="sectionColumns">
+    <!-- COLUMNA 1 FILTERS  -->
+    <div class="columnFilters">
+        <div class="titleFilter">
+            <h4>Filtros</h4>
+        </div>
+<div class="areaForm">
+  <label>Ordenar resultados por:</label>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedState" (ngModelChange)="onStateSelectionChange($event)">
+      <option *ngFor="let state of states" [ngValue]="state.value">{{ state.title }}</option>
+    </select>
+  </div>
+  <ul>
+    <li *ngFor="let genre of genres" [class.selected]="isSelected(genre.id)">
+      <input type="checkbox" id="genre{{ genre.id }}" (change)="onGenreChange($event, genre.id)" [checked]="isSelected(genre.id)" style="display: none">
+      <label for="genre{{ genre.id }}">{{ genre.name }}</label>
+    </li>
+  </ul>
+  <div class="areaButton">
+    <button (click)="buscar()">Buscar</button>
+  </div>
+    </div>
+    </div>
+</div>

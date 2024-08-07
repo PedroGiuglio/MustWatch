@@ -1,0 +1,82 @@
+<div class="mat-progress-bar-container" *ngIf="showProgressBar">
+    <mat-progress-bar mode="indeterminate">
+    </mat-progress-bar>
+</div>
+   <div class="back">
+   <div class="backgroundImg" [style.background-image]="getBackgroundImageUrl(backPath)">
+    <div class="sectionText">
+        <h2>Te damos la bienvenida.</h2>
+        <h3>Millones de películas, series y gente por descubrir. Explora ya.</h3>
+    </div>
+    <div class="pruebaUno">
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+            <input type="text" class="form-control" formControlName="movieName" placeholder="  Buscar una película, serie, persona...">
+            <button class="btn">Search</button>
+    </form>
+    </div>
+</div>
+</div>
+
+<div class="sectionTendencias">
+    <div class="sectionTitleTrending">
+    <div>
+        <h3>Tendencias</h3>
+    </div>
+    <div class="sectionButtons">
+        <div class="botoneraTrending">
+            <button [ngClass]="{'button': trendingHoy}" (click)="getHoyTrending()">Hoy</button>
+            <button [ngClass]="{'button': trendingWeek}" (click)="getWeekTrending()">Esta semana</button>
+        </div>
+    </div>
+</div>
+        <div class="div-con-fondo mostly-customized-scrollbar">
+          <div class="aver" *ngFor="let prueba of resultTendencia" [class.fade-out]="fadeOut">
+            <div  [style.background-image]="getBackgroundImageUrl(prueba.poster_path)" class="prueba"  (click)="navigateWithDelay(getRouterLink(prueba))"></div>
+            <div class="spaceText">
+              <div class="container">
+                <div class="circular-progress" [ngClass]="{'background-red': isRedBackground(prueba.vote_average), 'background-light-green': isLightGreenBackground(prueba.vote_average), 'background-dark-green': isDarkGreenBackground(prueba.vote_average)}">
+                    <div class="value-container">
+                        <h6>{{porcentaje(prueba.vote_average)}}</h6>
+                        <p>%</p>
+                    </div>
+                </div>
+              </div>
+              <h2>{{prueba.original_title||prueba.original_name}}</h2>
+              <p><span>{{prueba.release_date||prueba.first_air_date}}</span></p>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="sectionTrailer">
+
+        <div class="div-con-fondo-trailer " [style.background-image]="getBackgroundImageUrl(backPathTrailer)">
+        <div class="sectionTrailerText">
+            <div class="sectionTitle">
+            <h3>Últimos tráilers</h3>
+            </div>
+            <div class="sectionButtons">
+                <div class="botonera">
+                    <button [ngClass]="{'button': isPopular}" (click)="getPopular()">Popular</button>
+                    <button [ngClass]="{'button': isRetran}" (click)="airingToday()">Airing Today</button>
+                    <button [ngClass]="{'button': isTv}" (click)="getTv()">En televisión</button>
+                    <button [ngClass]="{'button': isAlquiler}" (click)="getUpcoming()">Upcoming movies</button>
+                    <button [ngClass]="{'button': isCine}" (click)="getCine()">En cines</button>
+                </div>
+            </div>
+        </div>
+        <div class="containterBoxes mostly-customized-scrollbar">
+          <div class="containerRepro" *ngFor="let aver of resultTop">
+            <div  [style.background-image]="getBackgroundImageUrl(aver.backdrop_path)" class="pruebaTrailer">
+                        <button  (click)="checkMediaType(aver.id)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                              </svg>
+                        </button>
+            </div>
+                <h6>{{aver.original_title||aver.original_name}}</h6>
+          </div>
+        </div>
+    </div>
+</div>
+

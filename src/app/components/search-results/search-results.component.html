@@ -1,0 +1,32 @@
+<div class="dede">
+    <div class="columns">
+    <div class="sectionColumns">
+    <!-- COLUMNA 1 FILTERS  -->
+    <div class="columnFilters">
+        <div class="results">
+            <h3>Resultados de la búsqueda</h3>
+        </div>
+        <button class="btn btn-light" (click)="mostrarSeries()" [ngClass]="{'text-bold': seriesSeleccionado}"><a>Series</a> <span>{{contadorSeries}}</span></button>
+        <button class="btn btn-light" (click)="mostrarPeliculas()"  [ngClass]="{'text-bold': peliculasSeleccionado}"><a>Peliculas</a> <span>{{contadorPeliculas}}</span></button>
+    </div>
+
+    <!-- COLUMNA 2 LISTMOVIES -->
+    <div class="imgPrueba">
+        <div class="div-con-fondo">
+          <div class="aver" *ngFor="let prueba of searchResult">
+            <div [style.background-image]="prueba.poster_path ? getBackgroundImageUrl(prueba.poster_path) : 'url(https://static.thenounproject.com/png/1554489-200.png)'" class="prueba" [routerLink]="['/movies', prueba.id]"></div>
+            <div class="spaceText">
+              <h2>{{prueba.name||prueba.original_title}}</h2>
+              <p><span>{{prueba.release_date || prueba.first_air_date}}</span></p>
+              <p>{{ obtenerPrimerosCienCaracteres(prueba.overview) }}</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn">Mostrar más</button>
+      </div>
+    </div>
+    </div>
+
+  
+  </div>
+  

@@ -1,0 +1,30 @@
+<div class="sectionTitle">
+    <h4>Series Populares</h4>
+</div>
+<div class="dede">
+    <div class="pedro">
+    <div class="columanPrueba">
+        <app-filter (buscarEvent)="buscar()"></app-filter>
+    </div>
+  
+    <!-- COLUMNA 2 LISTMOVIES -->
+    <div class="imgPrueba">
+        <div class="div-con-fondo">
+            <div class="aver" *ngFor="let prueba of trendingResult">
+              <div  [style.background-image]="getBackgroundImageUrl(prueba.poster_path)" class="prueba" [routerLink]="['/movies',prueba.id]"></div>
+              <div class="spaceText">
+                <div class="percentRating">
+                  <p>{{porcentaje(prueba.vote_average)}}%</p>
+                </div>
+                <h2>{{prueba.original_name}}</h2>
+                <p><span>{{prueba.first_air_date}}</span></p>
+              </div>
+            </div>
+          </div>
+          <button class="btn" (click)="mostrarMas()">Mostrar más</button>
+    </div>    
+</div>
+</div>
+
+
+
